@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TicTacToe</title>
     <!-- CSS Stylesheet -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -12,6 +12,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
      <!-- Font Awesome -->
      <script
@@ -40,38 +41,30 @@
 
    
 </head>
-<body>
-    
+<body class="">
+        
+        
         <div id="game" class="game">
+          <h1><i class="fa-solid fa-x" style="color: #005eff;"></i> Turn</h1>
             <div class="row justify-content-md-center ">
-                <div id="n1" class="col-xs-4 box"><i class="fa-solid fa-o" style="color: #ff470a;"></i></div>
-                <div id="n2" class="col-xs-4 box"><i class="fa-solid fa-x" style="color: #005eff; "></i></div>
-                <div id="n3" class="col-xs-4 box" onclick="chose(3)"></div>
+                <div data-x="0" id="n1" class="col-xs-4 box"></div>
+                <div data-x="1" id="n2" class="col-xs-4 box"></i></div>
+                <div data-x="2" id="n3" class="col-xs-4 box"></div>
             </div>
             <div  class="row justify-content-md-center">
-                <div id="n4" class="col-xs-4 box"></div>
-                <div id="n5" class="col-xs-4 box"></div>
-                <div id="n6" class="col-xs-4 box"></div>
+                <div data-x="3" id="n4" class="col-xs-4 box"></div>
+                <div data-x="4" id="n5" class="col-xs-4 box"></div>
+                <div data-x="5" id="n6" class="col-xs-4 box"></div>
             </div>
             <div class="row justify-content-md-center">
-                <div id="n7" class="col-xs-4 box"></div>
-                <div id="n8" class="col-xs-4 box"></div>
-                <div id="n9" class="col-xs-4 box"></div>
+                <div data-x="6" id="n7" class="col-xs-4 box"></div>
+                <div data-x="7" id="n8" class="col-xs-4 box"></div>
+                <div data-x="8" id="n9" class="col-xs-4 box"></div>
             </div>
         </div>
     
 
-    <script src="script.js">
-      var X = $('<i class="fa-solid fa-x" style="color: #005eff;"></i>')
-      var O = $('<i class="fa-solid fa-o" style="color: #ff470a;"></i>')
-      
-      $(".col-xs-4 box").click(function(event){
-        
-        var domElement = $( this ).get( 0 );
-        $(X).appendTo("#n4")
-
-  })
-    </script>
+    <script src="script.js"></script>
       
 </body>
 </html>
