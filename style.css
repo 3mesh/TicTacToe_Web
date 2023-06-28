@@ -11,8 +11,10 @@ body{
 h1{
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
-    margin-bottom: 5%;
     color: #FEF2BF;
+}
+.title{
+    margin-bottom: 5%;
 }
 .Xwin{
     background-color: #5A96E3;

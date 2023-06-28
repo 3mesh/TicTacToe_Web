@@ -8,7 +8,7 @@ var isXplay = true;
 
     
         $(".box").click(function(){
-    if($(this).html() === "")
+    if($(this).html() === ""){
     if(!checkdraw() && !checkWin("X") && !checkWin("O")){
         if(isXplay){
             $(this).append(X);
@@ -16,24 +16,42 @@ var isXplay = true;
             chosePos(position,"X");
             nextTurn()
             if(checkWin("X")){
-                $("h1").html(X+" win");
+                $(".title").html(X+" win");
                 $("body").addClass("Xwin");
+                $(".again").html("Press anywhere in the board to play again");
             }
             if(checkdraw())
-            $("h1").text("DRAW");
+            $(".title").text("DRAW");
         }else{
             $(this).append(O);
             var position = $(this).data("x");
             chosePos(position,"O");
             nextTurn()
             if(checkWin("O")){
-                $("h1").html(O+" win");
+                $(".title").html(O+" win");
                 $("body").addClass("Owin");
+                $(".again").html("Press anywhere in the board to play again");
             }
             
             if(checkdraw())
-            $("h1").text("DRAW");
+            $(".title").text("DRAW");
         }
+    }else{
+        board = ['','','','','','','','',''];
+        isXplay = true;
+        $(".box").html("");
+        $("body").removeClass();
+        $(".title").html(X+" Turn");
+        
+
+        
+    }}else if ($(this).html() !== "" && !(!checkdraw() && !checkWin("X") && !checkWin("O"))){
+        board = ['','','','','','','','',''];
+        isXplay = true;
+        $(".box").html("");
+        $("body").removeClass();
+        $(".title").html(X+" Turn");
+        $(".again").html("")
     }
         
   });
@@ -52,10 +70,10 @@ var isXplay = true;
   function nextTurn(){
     if(isXplay){
         isXplay = false;
-        $("h1").html(O+" Turn")
+        $(".title").html(O+" Turn")
     }else{
         isXplay = true;
-        $("h1").html(X+" Turn")
+        $(".title").html(X+" Turn")
     }
     
     
