@@ -10,7 +10,7 @@ var isAIplay = false;
 $("header").click(function(){
     $("#option-list").css("display","block");
     $("#game").css("display","none");
-    restartGame();
+    restartGame(false);
 })   
 $(".option").click(function(){
 
@@ -73,20 +73,20 @@ $(".option").click(function(){
         
                 
             }}else if ($(this).html() !== "" && !(!checkdraw(board) && !checkWin(board,"X") && !checkWin(board,"O"))){
-                restartGame();
+                restartGame(isAIplay);
             }
                 
           });
     }
     
-    function restartGame(){
+    function restartGame(AI){
         board = ['','','','','','','','',''];
                 isXplay = true;
                 $(".box").html("");
                 $("body").removeClass();
                 $(".title").html(X+" Turn");
                 $(".again").html("");
-                isAIplay = false;
+                isAIplay = AI;
     }
   
 

@@ -23,6 +23,9 @@ h1{
     font-size: 3rem;
     
 }
+#option-list{
+    text-align: center;
+}
 .option h1{
     border: #FEF2BF 3px dotted ;
     font-size: 3rem;;
@@ -33,7 +36,8 @@ h1{
     opacity: 0.5;
 }
 .option{
-    margin: 100px;
+    margin: 100px 0;
+    text-align: center;
 }
 .title{
     margin-bottom: 5%;
@@ -79,36 +83,44 @@ div i{
 @media screen and (max-width: 800px)  {
     .option h1{
         border: #FEF2BF 3px dotted ;
-        font-size: 100%;
+        font-size: 6vw;
         padding: 20px;
         display: inline;
     }
-    .option h1:hover{
-        opacity: 0.5;
-    }
-    .option{
-        margin: 100px;
-    }
- }
+}
+    
  @media screen and (max-width: 441px)  {
     .option h1{
         border: #FEF2BF 3px dotted ;
-        font-size: 75%;
+        font-size: 6vw;
         padding: 20px;
         display: inline;
     }
-    .option h1:hover{
-        opacity: 0.5;
-    }
-    .option{
-        margin: 100px;
-    }
+    
  }
  @media screen and (max-width: 390px){
     .option h1{
+        
         border: #FEF2BF 3px dotted ;
-        font-size: 50%;
-        padding: 20px;
-        display: inline;
+        font-size: 6vw ;
+        padding: 20px 30px;
+        
+        
+        display: block;
+    }
+    .box{
+        width: 20vw;
+        height: 10vh;
+        
+    }
+    .game{
+        padding: 0 50px ;
+    }
+    div i{
+    
+        font-size: 4.5rem;
+        margin-top:10% ;
+        
+        
     }
  }
