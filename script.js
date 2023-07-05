@@ -41,6 +41,8 @@ $(".option").click(function(){
                         $(".title").html(X+" win");
                         $("body").addClass("Xwin");
                         $(".again").html("Press anywhere in the board to play again");
+                        if(isAIplay)
+                        $(".title").html(X+" win vs AI");
                     }else if(checkdraw(board))
                     $(".title").text("DRAW");
 
@@ -111,7 +113,7 @@ $(".option").click(function(){
             chosePos(board,moveI,"O");
             nextTurn()
             if(checkWin(board,"O")){
-            $(".title").html(O+" win");
+            $(".title").html("AI win");
             $("body").addClass("Owin");
             $(".again").html("Press anywhere in the board to play again");
                     }
